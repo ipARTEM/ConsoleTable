@@ -8,8 +8,13 @@ namespace ConsoleTable
 {
     public class ExcelTable
     {
+        public int Id { get; set; }
 
-
+        public ExcelTable()
+        {
+            ExcelLines = new List<ExcelLine>();
+        }
+        public List<ExcelLine> ExcelLines { get; set; }
     }
 
     public class ExcelLine
@@ -22,7 +27,6 @@ namespace ConsoleTable
         }
 
         public List<ExcelCell> ExcelCells { get; set; }
-
     }
 
     public class ExcelCell
@@ -30,6 +34,5 @@ namespace ConsoleTable
         public int Id { get; set; }
 
         public int Name { get; set; }
-
     }
 }
